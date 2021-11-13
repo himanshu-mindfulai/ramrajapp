@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView android:layout_width="wrap_content"
+               android:id="@+id/sad"
+               android:src="@drawable/ic_sad"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="10dp"
+               android:backgroundTint="#734B45"
+               android:background="@drawable/badge_view"
+               android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/msg1"
+              android:layout_below="@id/sad"
+              android:text="Sorry!"
+              android:textColor="@color/colorBlack"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="10dp"
+              android:textSize="18sp"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_below="@id/msg1"
+              android:id="@+id/msg2"
+              android:textSize="16sp"
+              android:textColor="@color/colorText"
+              android:layout_centerHorizontal="true"
+              android:text="We do not delivery to your area"
+              android:layout_height="wrap_content"/>
+    <Button android:layout_width="match_parent"
+            android:layout_below="@id/msg2"
+            android:id="@+id/change_btn"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Change location"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/border_btn_selected_subcategory"
+            android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_below="@id/change_btn"
+              android:id="@+id/continue_browsing"
+              android:textSize="18sp"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/colorPrimaryDark"
+              android:layout_centerHorizontal="true"
+              android:text="Continue browsing"
+              android:layout_marginBottom="30dp"
+              android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

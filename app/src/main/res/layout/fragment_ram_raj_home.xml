@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:isScrollContainer="true">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:id="@+id/home_fragment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <RelativeLayout
+                            android:id="@+id/edittext_search_layout"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edittext_search2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/square_unselected"
+                                android:clickable="true"
+                                android:drawableStart="@drawable/search"
+                                android:drawablePadding="10dp"
+                                android:elevation="10dp"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:hint="Search products"
+                                android:inputType="none"
+                                android:padding="10dp" />
+                        </RelativeLayout>
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_banner_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/banner_size"
+                               android:layout_marginTop="@dimen/dimen15dp"
+                                app:cardBackgroundColor="@color/colorWhite">
+
+                            <ss.com.bannerslider.Slider
+                                    android:id="@+id/banner_slider1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="visible"
+                                    app:slider_animateIndicators="true"
+                                    app:slider_emptyView="@layout/layout_empty_view"
+                                    app:slider_indicatorSize="10dp"
+                                    app:slider_interval="0"
+                                    app:slider_loopSlides="true"
+                                    app:slider_selectedSlideIndicator="@drawable/indicator_circle_selected"
+                                    app:slider_unselectedSlideIndicator="@drawable/indicator_circle_unselected"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/subcategoriesRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+                        <LinearLayout
+                                android:id="@+id/featured_product_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+
+
+                            <TextView
+                                    android:id="@+id/featured_products_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:text="Top meals"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/featured_product_shimmerView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    shimmer:duration="800">
+
+                                <!-- Adding 7 rows of placeholders -->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/featured_productGrid"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/best_selling_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/best_selling_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Best Selling products"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/best_selling_shimmerView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                shimmer:duration="800">
+
+                                <!-- Adding 7 rows of placeholders -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/best_selling_productGrid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"/>
+
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:id="@+id/top_vendor_ll2"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/top_vendor_txt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="Top Restaurants"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmer_view_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                shimmer:duration="800">
+
+                                <!-- Adding 7 rows of placeholders -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/topvendorRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+            android:id="@+id/fab_submenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="120dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardUseCompatPadding="true">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/cardview_horizontal_padding"
+                        android:paddingTop="@dimen/cardview_vertical_padding"
+                        android:paddingRight="@dimen/cardview_horizontal_padding"
+                        android:paddingBottom="@dimen/cardview_vertical_padding"
+                        android:text="Call"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_call_24"
+                    app:backgroundTint="@color/colorGreen"
+                    app:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="70dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardUseCompatPadding="true">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/cardview_horizontal_padding"
+                        android:paddingTop="@dimen/cardview_vertical_padding"
+                        android:paddingRight="@dimen/cardview_horizontal_padding"
+                        android:paddingBottom="@dimen/cardview_vertical_padding"
+                        android:text="Whatsapp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_whtsapp"
+                    app:backgroundTint="@color/colorGreen"
+                    app:fabSize="mini"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_baseline_call_24"
+            android:tint="@color/colorWhite"
+            app:backgroundTint="@color/colorGreen"
+            app:fabSize="normal"
+            tools:ignore="ContentDescription"/>
+</RelativeLayout>

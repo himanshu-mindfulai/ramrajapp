@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.mindfulai.ui.RateUsFragment">
+
+    <TextView
+            android:id="@+id/title"
+            android:text="Love using "
+            android:textColor="@color/colorBlack"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="Rate us on play store"
+              android:layout_height="wrap_content"/>
+    <RatingBar android:layout_width="wrap_content"
+               android:id="@+id/rating_bar"
+               android:numStars="5"
+               android:layout_marginBottom="20dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:id="@+id/membership_layout"
+                  android:background="@drawable/edit_profile"
+                  android:padding="10dp"
+                  android:backgroundTint="@color/colorAdd"
+                  android:layout_height="wrap_content" tools:ignore="UselessParent">
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/member_price"
+                  android:text="Rs.45"
+                  android:drawablePadding="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:gravity="center|start"
+                  android:layout_weight="1"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:textStyle="bold"
+                  android:drawableStart="@drawable/ic_premium_quality"
+                  android:layout_height="wrap_content"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_gravity="center"
+                   android:id="@+id/lock"
+                   android:src="@drawable/ic_baseline_lock_24"
+                   android:layout_height="wrap_content"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:id="@+id/arrow"
+                   android:src="@drawable/arrow_right"
+                   android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

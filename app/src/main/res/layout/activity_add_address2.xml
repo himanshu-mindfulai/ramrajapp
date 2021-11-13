@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.mindfulai.Activites.AddAddressActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar_top">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/pickLocationFromMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_google_maps"
+                    android:drawablePadding="10dp"
+                    android:text="Pick from map"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"/>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pickLocationFromMap"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_btn_unselected"
+                        android:gravity="center|start"
+                        android:hint="@string/tag"
+                        android:inputType="textShortMessage"
+                        android:padding="15dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <EditText
+                        android:id="@+id/et_phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_btn_unselected"
+                        android:gravity="center|start"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:padding="15dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <EditText
+                        android:id="@+id/et_house_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_btn_unselected"
+                        android:ellipsize="end"
+                        android:gravity="center|start"
+                        android:hint="House /Flat /Block No*"
+                        android:padding="15dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <EditText
+                        android:id="@+id/et_street_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_btn_unselected"
+                        android:ellipsize="end"
+                        android:gravity="center|start"
+                        android:hint="Landmark*"
+                        android:padding="15dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <EditText
+                        android:id="@+id/et_city_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_btn_unselected"
+                        android:ellipsize="end"
+                        android:gravity="center|start"
+                        android:hint="City*"
+                        android:inputType="textPostalAddress"
+                        android:padding="15dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <Spinner
+                        android:id="@+id/et_state_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:ellipsize="end"
+                        android:gravity="center|start"
+                        android:background="@drawable/border_btn_unselected"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_postal_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center|start"
+                        android:hint="Postal Code*"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:background="@drawable/border_btn_unselected"
+                        android:padding="15dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:id="@+id/spinner_society_title"
+                          android:layout_marginTop="20dp"
+                          android:layout_gravity="start"
+                          android:textSize="15sp"
+                          android:text="Select society"
+                          android:layout_height="wrap_content"/>
+                <Spinner
+                        android:id="@+id/spinner_society"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+
+                <Button
+                        android:id="@+id/tv_continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@drawable/save_profile"
+                        android:gravity="center"
+                        android:text="Save Address"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite">
+
+    <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:isScrollContainer="true">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:id="@+id/home_fragment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                    <RelativeLayout
+                            android:id="@+id/edittext_search_layout"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edittext_search2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/square_unselected"
+                            android:clickable="true"
+                            android:drawableStart="@drawable/search"
+                            android:drawablePadding="10dp"
+                            android:elevation="10dp"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:hint="Search products"
+                            android:inputType="none"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                            android:id="@+id/edittext_search"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/vendor_cat_background"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:hint="Search for a item"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:drawableTint="@color/colorText"
+                            android:drawableEnd="@drawable/ic_search_white"
+                            android:layout_height="wrap_content"/>
+
+                    <!--                    <EditText-->
+                    <!--                            android:id="@+id/edit_text_search"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:background="@drawable/square"-->
+                    <!--                            android:layout_marginStart="10dp"-->
+                    <!--                            android:layout_marginEnd="10dp"-->
+                    <!--                            android:layout_marginTop="10dp"-->
+                    <!--                            android:paddingStart="15dp"-->
+                    <!--                            android:paddingEnd="15dp"-->
+                    <!--                            android:inputType="none"-->
+                    <!--                            android:focusable="false"-->
+                    <!--                            android:clickable="true"-->
+                    <!--                            android:hint="Search for a item"-->
+                    <!--                            android:paddingBottom="10dp"-->
+                    <!--                            android:paddingTop="10dp"-->
+                    <!--                            android:drawableTint="@color/colorText"-->
+                    <!--                            android:drawableEnd="@drawable/ic_search_white"-->
+                    <!--                            android:layout_height="wrap_content"/>-->
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:id="@+id/recharge_bill_layout"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="vertical">
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="18sp"
+                                  android:layout_marginTop="20dp"
+                                  android:layout_marginStart="20dp"
+                                  android:layout_marginBottom="10dp"
+                                  android:textStyle="bold"
+                                  android:textColor="@color/colorBlack"
+                                  android:text="Recharge &amp; Pay Bills!"
+                                  android:layout_height="wrap_content"/>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:orientation="horizontal"
+                                      android:layout_margin="10dp"
+                                      android:layout_height="wrap_content">
+                            <TextView android:layout_width="wrap_content"
+                                      android:id="@+id/mobile_recharge"
+                                      android:text="Prepaid"
+                                      android:textSize="14sp"
+                                      android:gravity="center"
+                                      android:drawableTop="@drawable/ic_prepaid"
+                                      android:layout_weight="1"
+                                      android:drawablePadding="15dp"
+                                      android:textColor="@color/colorBlack"
+                                      android:layout_height="wrap_content"/>
+                            <TextView android:layout_width="wrap_content"
+                                      android:id="@+id/dth_recharge"
+                                      android:text="DTH"
+                                      android:textSize="14sp"
+                                      android:layout_weight="1"
+                                      android:drawablePadding="15dp"
+                                      android:gravity="center"
+                                      android:drawableTop="@drawable/ic_dth"
+                                      android:textColor="@color/colorBlack"
+                                      android:layout_height="wrap_content"/>
+                            <TextView android:layout_width="wrap_content"
+                                      android:text="Postpaid"
+                                      android:id="@+id/postpaid_recharge"
+                                      android:textSize="14sp"
+                                      android:layout_weight="1"
+                                      android:gravity="center"
+                                      android:drawablePadding="15dp"
+                                      android:drawableTop="@drawable/ic_postpaid"
+                                      android:textColor="@color/colorBlack"
+                                      android:layout_height="wrap_content"/>
+                            <TextView android:layout_width="wrap_content"
+                                      android:text="See All"
+                                      android:id="@+id/sell_all_recharge"
+                                      android:textSize="14sp"
+                                      android:layout_weight="1"
+                                      android:drawablePadding="15dp"
+                                      android:gravity="center"
+                                      android:drawableTop="@drawable/see_all"
+                                      android:textColor="@color/colorBlack"
+                                      android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/home_page_msg"
+                            android:layout_width="match_parent"
+                            android:text="Msg"
+                            android:padding="10dp"
+                            android:background="#FFF4E2"
+                            android:layout_margin="10dp"
+                            android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/custom_order_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                        <TextView
+                                android:id="@+id/custom_order_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/square_unselected"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|start"
+                                android:paddingStart="20dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="10dp"
+                                android:text="Place Custom Order / Upload Pic"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:drawableStartCompat="@drawable/ic_baseline_camera_enhance_24"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                            android:id="@+id/wellness_button_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="3"
+                            android:orientation="horizontal">
+
+
+                        <TextView
+                                android:id="@+id/wellness_item_whatsapp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/square_unselected"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:paddingStart="20dp"
+                                android:paddingTop="10dp"
+                                android:layout_margin="10dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="10dp"
+                                android:text="Whatsapp\nTo\nOrder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="13sp"
+                                android:elevation="10dp"
+                                android:drawableTint="@color/colorPrimaryDark"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:drawableTop="@drawable/ic_whtsapp"/>
+                        <TextView
+                                android:id="@+id/wellness_custom_order_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/square_unselected"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:paddingStart="20dp"
+                                android:paddingTop="10dp"
+                                android:layout_margin="10dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="10dp"
+                                android:text="Place Custom\nOrder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="13sp"
+                                android:elevation="10dp"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:drawableTop="@drawable/ic_baseline_camera_enhance_24"/>
+                        <TextView
+                                android:id="@+id/wellness_item_call"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/square_unselected"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:paddingStart="20dp"
+                                android:paddingTop="10dp"
+                                android:layout_margin="10dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="10dp"
+                                android:text="Call\nTo\nOrder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="13sp"
+                                android:drawableTint="@color/colorPrimaryDark"
+                                android:elevation="10dp"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:drawableTop="@drawable/ic_baseline_call_24"/>
+
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/pickup_order_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                        <TextView
+                                android:id="@+id/pickup_order_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/square_unselected"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|start"
+                                android:paddingStart="20dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="10dp"
+                                android:text="Place Pickup Order"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card_shipping_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                        <TextView
+                                android:id="@+id/shipping_days"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/square_unselected"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|start"
+                                android:paddingStart="20dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="10dp"
+                                android:text="-"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:id="@+id/top_brands_above"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="25dp"
+                                android:text="Top Brands"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/topbrandsRecyclerViewAbove"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_banner_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/banner_size"
+                                app:cardBackgroundColor="@color/colorWhite">
+
+                            <ss.com.bannerslider.Slider
+                                    android:id="@+id/banner_slider1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="visible"
+                                    app:slider_animateIndicators="true"
+                                    app:slider_emptyView="@layout/layout_empty_view"
+                                    app:slider_indicatorSize="10dp"
+                                    app:slider_interval="0"
+                                    app:slider_loopSlides="true"
+                                    app:slider_selectedSlideIndicator="@drawable/indicator_circle_selected"
+                                    app:slider_unselectedSlideIndicator="@drawable/indicator_circle_unselected"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:id="@+id/top_vendor_ll1"
+                                      android:orientation="vertical"
+                                      android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/top_vendor_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="20dp"
+                                android:text="Top Restaurants"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/topvendorRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                        </LinearLayout>
+                        <TextView
+                                android:id="@+id/top_brands_below"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="20dp"
+                                android:text="Top Brands"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/topbrandsRecyclerViewBelow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                        <LinearLayout
+                                android:id="@+id/top_category_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:visibility="gone">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:id="@+id/product_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Top Category"
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"/>
+
+                                <TextView
+                                        android:id="@+id/see_all_categories"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@drawable/arrow_right"
+                                        android:drawablePadding="5dp"
+                                        android:text="All Categories"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="14sp"/>
+
+
+                            </LinearLayout>
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmer_view_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    shimmer:duration="800">
+
+                                <!-- Adding 7 rows of placeholders -->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+
+                                    <include layout="@layout/data_placeholder_layout"/>
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_categories_main"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_categories"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:id="@+id/top_vendor_ll2"
+                                      android:orientation="vertical"
+                                      android:layout_height="wrap_content">
+                            <TextView
+                                    android:id="@+id/top_vendor_txt2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Top Restaurants"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/topvendorRecyclerView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                                android:id="@+id/featured_product_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+
+                            <TextView
+                                    android:id="@+id/featured_products_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:text="Top meals"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/featured_product_shimmerView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    shimmer:duration="800">
+
+                                <!-- Adding 7 rows of placeholders -->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/featured_productGrid"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_banner_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/banner_size"
+                                android:visibility="gone"
+                                app:cardBackgroundColor="@color/colorWhite"
+                                app:cardElevation="5dp">
+
+                            <ss.com.bannerslider.Slider
+                                    android:id="@+id/banner_slider2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="visible"
+                                    app:slider_animateIndicators="true"
+                                    app:slider_emptyView="@layout/layout_empty_view"
+                                    app:slider_indicatorSize="10dp"
+                                    app:slider_interval="0"
+                                    app:slider_loopSlides="true"
+                                    app:slider_selectedSlideIndicator="@drawable/indicator_circle_selected"
+                                    app:slider_unselectedSlideIndicator="@drawable/indicator_circle_unselected"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner1"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/secondary_banner_images"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner2"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+                        <LinearLayout
+                                android:id="@+id/featured_category_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Featured Category"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/featuredCategoryRv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                        </LinearLayout>
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner3"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+
+                        <LinearLayout
+                                android:id="@+id/best_selling_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+
+                            <TextView
+                                    android:id="@+id/best_selling_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Best Selling products"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/best_selling_shimmerView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    shimmer:duration="800">
+
+                                <!-- Adding 7 rows of placeholders -->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                    <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/best_selling_productGrid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="50dp"
+                                    android:layout_marginTop="10dp"/>
+
+                        </LinearLayout>
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner4"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/carousel1"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:id="@+id/top_selling_category_layout"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:id="@+id/top_selling_category_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Top Selling Category"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/topSellingCategoryRv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/preorder_product_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:visibility="visible">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                <TextView
+                                        android:id="@+id/predorder_text"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/pre_order_products"
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"/>
+
+                                <TextView
+                                        android:id="@+id/see_all_preorder_product"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="5dp"
+                                        android:text="See All"
+                                        android:drawableTint="@color/colorPrimaryDark"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="14sp"
+                                        app:drawableEndCompat="@drawable/arrow_right"/>
+
+
+                            </LinearLayout>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_categories_preorder_products"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+                        </LinearLayout>
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner5"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_banner_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/banner_size"
+                                android:visibility="gone"
+                                app:cardBackgroundColor="@color/colorWhite"
+                                app:cardElevation="5dp">
+
+                            <ss.com.bannerslider.Slider
+                                    android:id="@+id/banner_slider3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="visible"
+                                    app:slider_animateIndicators="true"
+                                    app:slider_emptyView="@layout/layout_empty_view"
+                                    app:slider_indicatorSize="10dp"
+                                    app:slider_interval="0"
+                                    app:slider_loopSlides="true"
+                                    app:slider_selectedSlideIndicator="@drawable/indicator_circle_selected"
+                                    app:slider_unselectedSlideIndicator="@drawable/indicator_circle_unselected"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/carousel2"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/carousel3"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_height="wrap_content"/>
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner6"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+
+                        <LinearLayout
+                                android:id="@+id/top_product_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+
+                            <TextView
+                                    android:id="@+id/top_products_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Shopwie Special Products"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/top_productGrid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"/>
+
+
+                        </LinearLayout>
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner7"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+                        <ImageView android:layout_width="match_parent"
+                                   android:id="@+id/banner8"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:layout_height="200dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_container_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        shimmer:duration="800">
+
+                    <!-- Adding 7 rows of placeholders -->
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+
+                        <include layout="@layout/data_placeholder_layout_for_products"/>
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.baoyz.widget.PullRefreshLayout>
+
+    <FrameLayout
+            android:id="@+id/fab_submenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="120dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardUseCompatPadding="true">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/cardview_horizontal_padding"
+                        android:paddingTop="@dimen/cardview_vertical_padding"
+                        android:paddingRight="@dimen/cardview_horizontal_padding"
+                        android:paddingBottom="@dimen/cardview_vertical_padding"
+                        android:text="Call"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_call_24"
+                    app:backgroundTint="@color/colorGreen"
+                    app:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="70dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardUseCompatPadding="true">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/cardview_horizontal_padding"
+                        android:paddingTop="@dimen/cardview_vertical_padding"
+                        android:paddingRight="@dimen/cardview_horizontal_padding"
+                        android:paddingBottom="@dimen/cardview_vertical_padding"
+                        android:text="Whatsapp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_whtsapp"
+                    app:backgroundTint="@color/colorGreen"
+                    app:fabSize="mini"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_baseline_call_24"
+            android:tint="@color/colorWhite"
+            app:backgroundTint="@color/colorGreen"
+            app:fabSize="normal"
+            tools:ignore="ContentDescription"/>
+</RelativeLayout>

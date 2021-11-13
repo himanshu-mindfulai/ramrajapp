@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6F6F6"
+    tools:context="com.mindfulai.Activites.TopProductsActivity">
+
+    <TextView
+        android:id="@+id/no_vendors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="0 Vendors"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/search_vendors"
+        android:layout_width="match_parent"
+        android:background="@drawable/square"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:hint="Search vendors"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:drawableTint="@color/colorText"
+        android:drawableEnd="@drawable/ic_search_white"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vendor_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

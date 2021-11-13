@@ -1,0 +1,6 @@
+.gradle/
+.idea/
+.app/src/main/java/com.mindfulai/Utils/SPData.java
+local.properties
+
+/app/src/main/java/com/mindfulai/Utils/SPData.java

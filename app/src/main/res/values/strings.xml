@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">XPRESSOO</string>
+
+    <string name="token_expired">Token Expired</string>
+    <string name="server_down">Server Down</string>
+    <string name="no_internet">No Internet</string>
+    <string name="please_wait">Please wait ...</string>
+    <string name="rs">\u20B9</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="orderHistory">Order History</string>
+    <string name="home">Home</string>
+    <string name="open">Drawer Open</string>
+    <string name="closed">Drawer Closed</string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="faq">FAQ</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="razorpay_key_id">rzp_EHTXy1fM</string>
+    <string name="razorpay_key_secret">YpuBzkeqzFk7NEHR3QnJKZep</string>
+    <string name="google_webclient_id">572992807421-132i4oau3nt4r331vt7074et2ovjiprj.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">431290474533310</string>
+    <string name="fb_login_protocol_scheme">fb431290474533310</string>
+    <string name="maps_api_key">AIzaSyDm2gqIhM4INgZWb-w7muCvUDj42FU3dmQ</string>
+    <string name="pickTime">Pick time</string>
+    <string name="domainUriPrefix">mindful.page.link</string>
+    <string name="productDetailUriPrefix">mindful.page.link</string>
+    <string name="linkUrl">https://mindfulecom.in/?</string>
+    <string name="not_product_available">This product is not available in</string>
+    <string name="no_shipping_method_available">No shipping method available in</string>
+    <string name="repeat">Subscribe</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_registered_yet_click_here_to_register">
+        <u>Not registered yet? Click here to register</u>
+    </string>
+    <string name="click_to_login">
+        <u>Already have account? Click here to login</u>
+    </string>
+    <string name="tag">Tag*</string>
+    <string name="mobile_number">Mobile Number*</string>
+    <string name="add">Add</string>
+    <string name="veg">veg</string>
+    <string name="nonveg">nonveg</string>
+    <string name="dunzo">dunzo</string>
+    <string name="buy_now">Buy now</string>
+    <string name="pre_order_products">Preorder Products</string>
+    <string name="kwik_api_key">f26a92-01e85c-8dc353-7dfbc7-0f0fec</string>
+    <string name="vendor_profile">vendorprofile.page.link</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="speech_not_available">Speech not available</string>
+    <string name="yes">Yes</string>
+    <string name="no">no</string>
+    <string name="out_of_stock">Out of stock</string>
+    <string name="delivery_address">Delivery Address</string>
+</resources>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mindfulai.Activites.UploadDocsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DocumentsPickerActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="32dp">
+
+                <RelativeLayout
+                    android:id="@+id/pick_pan_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Pan Card (Please make sure that you name and pan card number are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/upload_pan_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload Pan card"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/pan_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="60dp"
+                        android:scaleType="fitCenter"
+                        android:onClick="handlePanClick"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pick_aadhar_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Aadhar Card (Please make sure that you name and aadhar card number are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/upload_aadhar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload aadhar card"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/aadhar_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginTop="60dp"
+                        android:onClick="handleAadharClick" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pick_cheque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Cheque book (Please make sure that you name and bank details are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/upload_cheque_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload cheque book image"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/cheque_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginTop="60dp"
+                        android:onClick="handleChequeClick"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shop_inside"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Shop Inside (Please make sure that you name and bank details are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/shop_inside_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload shop inside image"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/shop_inside_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="60dp"
+                        android:scaleType="fitCenter"
+                        android:onClick="handleShopInsideClick"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shop_outside"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Shop Outside (Please make sure that you name and bank details are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/shop_outside_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload shop outside image"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/shop_outside_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="60dp"
+                        android:scaleType="fitCenter"
+                        android:onClick="handleShopOutsideClick"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shop_business_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Shop Business Card (Please make sure that you name and bank details are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/shop_business_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload shop business card image"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/shop_business_card_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="60dp"
+                        android:scaleType="fitCenter"
+                        android:onClick="handleBusinessCardClick"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shop_merchant_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Shop Merchant Card (Please make sure that you name and bank details are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/shop_merchant_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload shop merchant card image"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/shop_merchant_card_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="60dp"
+                        android:scaleType="fitCenter"
+                        android:onClick="handleMerchantCardClick"
+                       />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Any Other Image (Please make sure that you name and bank details are clearly visible in the image to get easy and hassle free verification)"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/other_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="180dp"
+                        android:text="Click to upload any other image"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/other_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="60dp"
+                        android:onClick="handleOtherClick"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/save_changes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="uploadDocs"
+                    android:text="Save changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

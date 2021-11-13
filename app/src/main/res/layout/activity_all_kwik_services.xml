@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.mindfulai.kwikapi.AllKwikServicesActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:id="@+id/recharge_bill_layout"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_margin="10dp"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/mobile_recharge"
+                      android:text="Prepaid\n Recharge"
+                      android:textSize="14sp"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/ic_prepaid"
+                      android:layout_weight="1"
+                      android:drawablePadding="15dp"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/dth_recharge"
+                      android:text="DTH/D2H\n Recharge"
+                      android:textSize="14sp"
+                      android:layout_weight="1"
+                      android:drawablePadding="15dp"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/ic_dth"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="Postpaid\nBill payments"
+                      android:id="@+id/postpaid_recharge"
+                      android:textSize="14sp"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:drawablePadding="15dp"
+                      android:drawableTop="@drawable/ic_postpaid"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="Fastag\nRecharges"
+                      android:id="@+id/fastag_recharge"
+                      android:textSize="14sp"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:drawablePadding="15dp"
+                      android:drawableTop="@drawable/ic_fastag"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_margin="10dp"
+                      android:weightSum="3"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/electricity_recchrge"
+                      android:text="Electricity\n Bill Payments"
+                      android:textSize="14sp"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/ic_electricity"
+                      android:layout_weight="1"
+                      android:drawablePadding="15dp"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/broadband_recchrge"
+                      android:text="Broadband\n Bill Payments"
+                      android:textSize="14sp"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/ic_broadband"
+                      android:layout_weight="1"
+                      android:drawablePadding="15dp"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/landline_recharge"
+                      android:text="Landline\n Bill Payments"
+                      android:textSize="14sp"
+                      android:layout_weight="1"
+                      android:drawablePadding="15dp"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/ic_landline"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/gas_bill_recharge"
+                      android:text="Gas\n Bill Payments"
+                      android:textSize="14sp"
+                      android:layout_weight="1"
+                      android:drawablePadding="15dp"
+                      android:gravity="center"
+                      android:drawableTop="@drawable/ic_gas_cylinder"
+                      android:textColor="@color/colorBlack"
+                      android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mindfulai.ministore">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature
+            android:name="android.hardware.location.network"
+            android:required="false"/>
+    <uses-feature
+            android:name="android.hardware.location.gps"
+            android:required="false"/>
+
+    <application
+            android:name="com.mindfulai.Utils.SPData"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:requestLegacyExternalStorage="true"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity android:name="com.mindfulai.kwikapi.GasBillActivity"      android:screenOrientation="portrait"
+                  android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.PurchasedMembershipActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.CheckMembershipActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.kwikapi.AllKwikServicesActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.kwikapi.PostpaidRechargeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.kwikapi.MobileRechargeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.AllPreOrderProductsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.PreOrderCheckoutActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.CheckoutActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.PickupOrderActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.mindfulai.Activites.PaymentHistoryActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.VendorEarningActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.mindfulai.Activites.ProductsByVendorActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                        android:host="@string/vendor_profile"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.VendorByCategoryActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.TopProductsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.CartPageActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.EditSubscriptionActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.SubscriptionActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.AddressSelectorActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.PromoCodeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyC5oAfl7J7rANPcWxve5MvvbKgJ3q5vRGQ"/> <!-- android:value="AIzaSyBKZejrZNZpLlemrH28Nc46XzHsRSVRxKI" /> -->
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
+
+        <activity
+                android:name="com.mindfulai.Activites.WalletActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.CommonActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.AddAddressActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.mindfulai.Activites.SeeAllCategoryActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.SearchPrdouctActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+                android:name="com.mindfulai.Activites.PrivacyPolicy"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.FAQActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.OrderHistoryActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.ProfileActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="adjustPan"/>
+
+        <service
+                android:name="com.mindfulai.customclass.FCMService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+                android:name="com.mindfulai.Activites.OrderHistoryDetailsActivity"
+                android:label="Order history details"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Base.Theme.AppCompat"/>
+
+        <meta-data
+                android:name="com.razorpay.ApiKey"
+                android:value="@string/razorpay_key_secret"/>
+
+        <activity
+                android:name="com.mindfulai.Activites.ProductDetailsActivity"
+                android:label="Product Details"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                        android:host="@string/productDetailUriPrefix"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.OrderPlacedActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/ActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.AllProductsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.LoginActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+                android:name="com.mindfulai.Activites.SplashActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                        android:host="@string/domainUriPrefix"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.mindfulai.Activites.MainActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="adjustPan"/>
+
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id"/>
+
+        <activity
+                android:name="com.facebook.FacebookActivity"
+                android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                android:label="@string/app_name"/>
+        <activity
+                android:name="com.facebook.CustomTabActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

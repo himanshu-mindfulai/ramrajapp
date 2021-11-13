@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/replace_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_baseline_compare_arrows_24"
+        android:drawablePadding="20dp"
+        android:gravity="center|start"
+        android:text="Replace"
+        android:textColor="@color/com_facebook_blue"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/return_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_replace"
+        android:drawablePadding="20dp"
+        android:gravity="center|start"
+        android:text="Return"
+        android:textColor="@color/colorGreen"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/cancel_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_cancel_order_24dp"
+        android:drawablePadding="20dp"
+        android:gravity="center|start"
+        android:text="Cancel"
+        android:textColor="@color/colorError"
+        android:textSize="18sp" />
+</LinearLayout>

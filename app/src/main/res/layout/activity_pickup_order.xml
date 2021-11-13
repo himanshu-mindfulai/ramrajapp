@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mindfulai.Activites.PickupOrderActivity">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_ios_new_24"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:text="Send package"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Pickup Address*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_pickup_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:inputType="textLongMessage"
+        android:gravity="center|start"
+        android:maxLines="1"
+        android:hint="Enter pickup location"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Delivery Address*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_dropup_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:inputType="textLongMessage"
+        android:gravity="center|start"
+        android:maxLines="1"
+        android:hint="Enter delivery location"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Select package contents*"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_package_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:inputType="textLongMessage"
+        android:gravity="center|start"
+        android:maxLines="1"
+        android:hint="e.g Food, document"
+        android:textSize="16sp"/>
+
+
+    <Button
+        android:id="@+id/confirm_order"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Confirm order"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/checkout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

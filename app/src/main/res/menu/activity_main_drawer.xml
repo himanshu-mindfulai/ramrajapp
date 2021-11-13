@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_profile"
+        android:title="My Profile" />
+    <item
+            android:id="@+id/nav_membership"
+            android:icon="@drawable/ic_offer"
+            android:title="Membership" />
+    <item
+        android:id="@+id/nav_order_history"
+        android:icon="@drawable/ic_history"
+        android:title="Order History" />
+    <item
+        android:id="@+id/nav_subscriptions"
+        android:icon="@drawable/ic_baseline_replay_24"
+        android:title="Subscriptions" />
+    <item
+        android:id="@+id/nav_top_products"
+        android:icon="@drawable/ic_view_module_black_24dp"
+        android:title="Top products" />
+    <item
+        android:id="@+id/nav_wallet"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+        android:title="Wallet" />
+    <item
+        android:id="@+id/nav_payment_history"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:visible="false"
+        android:title="Payment history" />
+    <item
+        android:id="@+id/nav_wishlist"
+        android:icon="@drawable/ic_favorite_black_18dp"
+        android:title="Wishlist" />
+    <item
+            android:id="@+id/join_us"
+            android:icon="@drawable/ic_group_add_black_24dp"
+            android:title="Be A Vendor With Us" />
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Notifications" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_info_fill"
+        android:title="@string/about_us" />
+    <item
+        android:id="@+id/nav_faq"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="@string/faq" />
+    <item
+            android:id="@+id/nav_website"
+            android:icon="@drawable/ic_website"
+            android:title="Website" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:iconTint="#231F20"
+        android:title="Share" />
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/ic_star_black_24dp"
+        android:iconTint="#231F20"
+        android:title="Rate the app" />
+    <item
+        android:id="@+id/nav_contact"
+        android:icon="@drawable/ic_feedback"
+        android:iconTint="#231F20"
+        android:title="Contact" />
+
+    <item
+        android:id="@+id/report_problem"
+        android:icon="@drawable/ic_reportbug"
+        android:title="Report Bug/Issue" />
+    <item
+        android:id="@+id/nav_return_privacy"
+        android:icon="@drawable/ic_check_circle_white_24dp"
+        android:title="Return Policy" />
+    <item
+        android:id="@+id/nav_tnc"
+        android:icon="@drawable/ic_baseline_subject_24"
+        android:title="Terms and conditions" />
+    <item
+        android:id="@+id/nav_privacy"
+        android:icon="@drawable/ic_security_black_24dp"
+        android:title="@string/privacy_policy" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout" />
+    <item
+        android:id="@+id/item_social_media"
+        android:icon="@null"
+        android:title=""
+        android:titleCondensed=""
+        app:actionLayout="@layout/social_media_layout_main_activity"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
+</menu>

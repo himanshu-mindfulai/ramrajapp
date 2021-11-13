@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.appbar.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:theme="@style/MainApptheme"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#ffffff"
+            app:tabGravity="fill"
+            app:tabIconTint="@color/nav_item_color"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="-1dp"
+            app:tabPaddingStart="-1dp"
+            app:tabTextAppearance="@style/MineCustomTabTextMain"
+            app:tabTextColor="@color/nav_item_color" />
+    </com.google.android.material.appbar.AppBarLayout>
